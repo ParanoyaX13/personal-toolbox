@@ -22,7 +22,27 @@ def main():
             print("Invalid option. Try again.")
 
 def calculator():
-    print("Calculator - Coming soon...")
+    print("\n--- Advanced Calculator ---")
+    try:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+        operation = input("Choose operation (+, -, *, /): ")
+        
+        if operation == "+":
+            result = num1 + num2
+        elif operation == "-":
+            result = num1 - num2
+        elif operation == "*":
+            result = num1 * num2
+        elif operation == "/":
+            result = num1 / num2
+        else:
+            print("Invalid operation!")
+            return
+        
+        print(f"Result: {num1} {operation} {num2} = {result}")
+    except:
+        print("Error: Please enter valid numbers.")
 
 def password_generator():
     print("Password Generator - Coming soon...")
