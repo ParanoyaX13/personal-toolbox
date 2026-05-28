@@ -1,15 +1,18 @@
 import random
 import string
+from utils import generate_password, get_current_time, validate_number
 
 def show_menu():
     print("\n=== Personal Toolbox ===")
     print("1. Calculator")
     print("2. Password Generator")
     print("3. Unit Converter")
+    print("4. Show Current Time")
     print("0. Exit")
     return input("Choose an option: ")
 
 def main():
+    print(f"Welcome! Current time: {get_current_time()}\n")
     while True:
         choice = show_menu()
         if choice == "1":
@@ -18,8 +21,10 @@ def main():
             password_generator()
         elif choice == "3":
             unit_converter()
+        elif choice == "4":
+            print(f"Current time: {get_current_time()}")
         elif choice == "0":
-            print("Goodbye!")
+            print("Goodbye! Thanks for using Personal Toolbox.")
             break
         else:
             print("Invalid option. Try again.")
@@ -38,11 +43,10 @@ def calculator():
         elif operation == "*":
             result = num1 * num2
         elif operation == "/":
-            result = num1 / num2
+            result = num1 / num2 if num2 != 0 else "Cannot divide by zero"
         else:
             print("Invalid operation!")
             return
-        
         print(f"Result: {num1} {operation} {num2} = {result}")
     except:
         print("Error: Please enter valid numbers.")
@@ -50,53 +54,37 @@ def calculator():
 def password_generator():
     print("\n--- Strong Password Generator ---")
     try:
-        length = int(input("Enter password length (minimum 8): "))
+        length = int(input("Enter password length (min 8): ") or 12)
         if length < 8:
             length = 8
-            print("Minimum length set to 8.")
-        
         include_numbers = input("Include numbers? (y/n): ").lower() == 'y'
         include_symbols = input("Include symbols? (y/n): ").lower() == 'y'
         
-        characters = string.ascii_letters
-        if include_numbers:
-            characters += string.digits
-        if include_symbols:
-            characters += string.punctuation
-        
-        password = ''.join(random.choice(characters) for _ in range(length))
-        print(f"\nYour generated password: {password}")
+        password = generate_password(length, include_numbers, include_symbols)
+        print(f"\nYour strong password: {password}")
     except:
-        print("Error: Please enter a valid number.")
+        print("Error occurred.")
 
 def unit_converter():
     print("\n--- Unit Converter ---")
     print("1. Kilometers to Miles")
     print("2. Celsius to Fahrenheit")
     print("3. Kilograms to Pounds")
-    print("4. Back to menu")
+    print("4. Back")
     
-    choice = input("Choose conversion type: ")
-    
+    choice = input("Choose: ")
     try:
         if choice == "1":
             km = float(input("Enter kilometers: "))
-            miles = km * 0.621371
-            print(f"{km} km = {miles:.2f} miles")
+            print(f"{km} km = {km * 0.621371:.2f} miles")
         elif choice == "2":
-            celsius = float(input("Enter Celsius: "))
-            fahrenheit = (celsius * 9/5) + 32
-            print(f"{celsius}°C = {fahrenheit:.2f}°F")
+            c = float(input("Enter Celsius: "))
+            print(f"{c}°C = {(c * 9/5) + 32:.2f}°F")
         elif choice == "3":
             kg = float(input("Enter kilograms: "))
-            pounds = kg * 2.20462
-            print(f"{kg} kg = {pounds:.2f} pounds")
-        elif choice == "4":
-            return
-        else:
-            print("Invalid choice!")
+            print(f"{kg} kg = {kg * 2.20462:.2f} pounds")
     except:
-        print("Error: Please enter valid numbers.")
+        print("Error: Invalid input.")
 
 if __name__ == "__main__":
     main()
