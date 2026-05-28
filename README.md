@@ -11,3 +11,14 @@ A collection of useful Python command-line tools.
 ## How to run
 ```bash
 python main.py
+## Contributing
+
+Contributions are welcome! 
+
+### How to contribute:
+1. Fork the project
+2. Create a new branch
+3. Make your changes
+4. Open a Pull Request
+
+Any new tool idea or bug fix is appreciated ❤️
