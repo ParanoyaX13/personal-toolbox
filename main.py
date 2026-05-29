@@ -11,6 +11,7 @@ from datetime import datetime
 from utils import generate_password, get_current_time
 from organizer import organize_files
 from weather import get_weather
+from game import number_guessing_game
 
 
 def show_menu():
@@ -23,6 +24,7 @@ def show_menu():
     print("5. Currency Converter")
     print("6. File Organizer")
     print("7. Weather Simulator")
+    print("8. Number Guessing Game") 
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -48,6 +50,8 @@ def main():
             organize_files()
             elif choice == "7":           
             get_weather()
+        elif choice == "8":                    
+            number_guessing_game()
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
