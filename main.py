@@ -18,6 +18,7 @@ from rock_paper_scissors import rock_paper_scissors
 from age_calculator import age_calculator
 from quotes import motivational_quote
 from timer import countdown_timer
+from habit import habit_tracker
 
 
 
@@ -38,6 +39,7 @@ def show_menu():
     print("12. Age Calculator")
     print("13. Motivational Quote")
     print("14. Countdown Timer")
+    print("15. Habit Tracker") 
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -77,6 +79,8 @@ elif choice == "13":
             motivational_quote()
     elif choice == "14":                     
             countdown_timer()
+elif choice == "15":                     
+            habit_tracker()
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
