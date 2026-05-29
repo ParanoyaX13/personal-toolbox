@@ -34,6 +34,7 @@ def show_expenses():
         total += expense["amount"]
     
     print(f"\nTotal Expenses: ${total}")
+    print(f"Total Entries: {len(expenses)}")
 
 def main():
     while True:
