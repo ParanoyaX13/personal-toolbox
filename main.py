@@ -19,7 +19,9 @@ from age_calculator import age_calculator
 from quotes import motivational_quote
 from timer import countdown_timer
 from habit import habit_tracker
-
+from qr_generator import qr_code_generator
+except ImportError:
+    qr_code_generator = None
 
 
 def show_menu():
@@ -40,6 +42,7 @@ def show_menu():
     print("13. Motivational Quote")
     print("14. Countdown Timer")
     print("15. Habit Tracker") 
+    print("16. QR Code Generator")
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -81,6 +84,12 @@ elif choice == "13":
             countdown_timer()
 elif choice == "15":                     
             habit_tracker()
+elif choice == "16":                     
+            if qr_code_generator:
+                qr_code_generator()
+            else:
+                print("QR Code Generator not available.")
+
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
