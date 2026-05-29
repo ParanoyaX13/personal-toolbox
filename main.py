@@ -3,19 +3,21 @@ import string
 from utils import generate_password, get_current_time, validate_number
 
 def show_menu():
+    def show_menu():
     print("\n=== Personal Toolbox ===")
     print("1. Calculator")
     print("2. Password Generator")
     print("3. Unit Converter")
     print("4. Show Current Time")
+    print("5. Currency Converter")
+    print("6. File Organizer")        
     print("0. Exit")
     return input("Choose an option: ")
-
-def main():
+    in():
     print(f"Welcome! Current time: {get_current_time()}\n")
     while True:
         choice = show_menu()
-        if choice == "1":
+     if choice == "1":
             calculator()
         elif choice == "2":
             password_generator()
@@ -23,18 +25,16 @@ def main():
             unit_converter()
         elif choice == "4":
             print(f"Current time: {get_current_time()}")
-            print("4. Show Current Time")
-            elif choice == "5":
+        elif choice == "5":
             currency_converter()
-    print("5. Currency Converter")  
-    print("0. Exit")
+        elif choice == "6":
+            organize_files()
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
         else:
             print("Invalid option. Try again.")
-
-def calculator():
+            lculator():
     print("\n--- Advanced Calculator ---")
     try:
         num1 = float(input("Enter first number: "))
