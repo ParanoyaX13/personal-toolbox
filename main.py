@@ -10,6 +10,7 @@ Created: May 2026
 from datetime import datetime
 from utils import generate_password, get_current_time
 from organizer import organize_files
+from weather import get_weather
 
 
 def show_menu():
@@ -21,6 +22,7 @@ def show_menu():
     print("4. Show Current Time")
     print("5. Currency Converter")
     print("6. File Organizer")
+    print("7. Weather Simulator")
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -44,6 +46,8 @@ def main():
             currency_converter()
         elif choice == "6":
             organize_files()
+            elif choice == "7":           
+            get_weather()
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
