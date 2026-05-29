@@ -12,6 +12,8 @@ from utils import generate_password, get_current_time
 from organizer import organize_files
 from weather import get_weather
 from game import number_guessing_game
+from password_checker import password_strength_checker
+
 
 
 def show_menu():
@@ -25,6 +27,7 @@ def show_menu():
     print("6. File Organizer")
     print("7. Weather Simulator")
     print("8. Number Guessing Game") 
+    print("9. Password Strength Checker")
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -52,6 +55,8 @@ def main():
             get_weather()
         elif choice == "8":                    
             number_guessing_game()
+    elif choice == "9":                       
+            password_strength_checker()
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
