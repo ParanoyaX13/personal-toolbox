@@ -13,6 +13,8 @@ from organizer import organize_files
 from weather import get_weather
 from game import number_guessing_game
 from password_checker import password_strength_checker
+from bmi import bmi_calculator
+
 
 
 
@@ -28,6 +30,7 @@ def show_menu():
     print("7. Weather Simulator")
     print("8. Number Guessing Game") 
     print("9. Password Strength Checker")
+    print("10. BMI Calculator")
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -57,6 +60,8 @@ def main():
             number_guessing_game()
     elif choice == "9":                       
             password_strength_checker()
+elif choice == "10":                  
+            bmi_calculator()
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
