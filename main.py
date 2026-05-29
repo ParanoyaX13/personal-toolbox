@@ -16,6 +16,7 @@ from password_checker import password_strength_checker
 from bmi import bmi_calculator
 from rock_paper_scissors import rock_paper_scissors
 from age_calculator import age_calculator
+from quotes import motivational_quote
 
 
 
@@ -34,6 +35,7 @@ def show_menu():
     print("10. BMI Calculator")
     print("11. Rock Paper Scissors") 
     print("12. Age Calculator")
+    print("13. Motivational Quote")
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -69,6 +71,8 @@ elif choice == "11":
             rock_paper_scissors()
 elif choice == "12":                     
             age_calculator()
+elif choice == "13":                    
+            motivational_quote()
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
