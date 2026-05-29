@@ -17,6 +17,7 @@ from bmi import bmi_calculator
 from rock_paper_scissors import rock_paper_scissors
 from age_calculator import age_calculator
 from quotes import motivational_quote
+from timer import countdown_timer
 
 
 
@@ -36,6 +37,7 @@ def show_menu():
     print("11. Rock Paper Scissors") 
     print("12. Age Calculator")
     print("13. Motivational Quote")
+    print("14. Countdown Timer")
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -73,6 +75,8 @@ elif choice == "12":
             age_calculator()
 elif choice == "13":                    
             motivational_quote()
+    elif choice == "14":                     
+            countdown_timer()
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
