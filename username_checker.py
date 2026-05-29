@@ -17,6 +17,9 @@ def check_username():
     if not username:
         print("Username cannot be empty.")
         return
+        if len(username) < 4:
+    print("❌ Username must be at least 4 characters long.")
+    return
     
     if username in taken_usernames:
         print("❌ Username is already taken.")
