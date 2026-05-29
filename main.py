@@ -1,23 +1,38 @@
-import random
-import string
-from utils import generate_password, get_current_time, validate_number
+"""
+Personal Toolbox - Main Application
+A collection of useful command-line tools.
+
+Author: ParanoyaX13
+Version: 1.0
+Created: May 2026
+"""
+
+from datetime import datetime
+from utils import generate_password, get_current_time
+from organizer import organize_files
+
 
 def show_menu():
-    def show_menu():
+    """Display the main menu and return user's choice"""
     print("\n=== Personal Toolbox ===")
     print("1. Calculator")
     print("2. Password Generator")
     print("3. Unit Converter")
     print("4. Show Current Time")
     print("5. Currency Converter")
-    print("6. File Organizer")        
+    print("6. File Organizer")
     print("0. Exit")
     return input("Choose an option: ")
-    in():
-    print(f"Welcome! Current time: {get_current_time()}\n")
+
+
+def main():
+    """Main application loop that handles user navigation"""
+    print(f"Welcome to Personal Toolbox! Current time: {get_current_time()}\n")
+    
     while True:
         choice = show_menu()
-     if choice == "1":
+        
+        if choice == "1":
             calculator()
         elif choice == "2":
             password_generator()
@@ -34,7 +49,10 @@ def show_menu():
             break
         else:
             print("Invalid option. Try again.")
-            lculator():
+
+
+def calculator():
+    """Advanced calculator supporting basic arithmetic operations"""
     print("\n--- Advanced Calculator ---")
     try:
         num1 = float(input("Enter first number: "))
@@ -52,11 +70,14 @@ def show_menu():
         else:
             print("Invalid operation!")
             return
+            
         print(f"Result: {num1} {operation} {num2} = {result}")
     except:
         print("Error: Please enter valid numbers.")
 
+
 def password_generator():
+    """Generates strong random passwords with user preferences"""
     print("\n--- Strong Password Generator ---")
     try:
         length = int(input("Enter password length (min 8): ") or 12)
@@ -70,7 +91,9 @@ def password_generator():
     except:
         print("Error occurred.")
 
+
 def unit_converter():
+    """Converts between different units (length, temperature, weight)"""
     print("\n--- Unit Converter ---")
     print("1. Kilometers to Miles")
     print("2. Celsius to Fahrenheit")
@@ -90,6 +113,22 @@ def unit_converter():
             print(f"{kg} kg = {kg * 2.20462:.2f} pounds")
     except:
         print("Error: Invalid input.")
+
+
+def currency_converter():
+    """Converts Iranian Rial to other currencies (demo rates)"""
+    print("\n--- Currency Converter (Mock) ---")
+    print("Note: This is a demo version with fixed rates.")
+    try:
+        amount = float(input("Enter amount in IRR: "))
+        print(f"\n{amount:,} IRR")
+        print(f"≈ {amount/42000:.2f} USD")
+        print(f"≈ {amount/48000:.2f} EUR")
+        print(f"≈ {amount/55000:.2f} GBP")
+        print(f"≈ {amount/12:.0f} AED")
+    except:
+        print("Error: Please enter a valid number.")
+
 
 if __name__ == "__main__":
     main()
