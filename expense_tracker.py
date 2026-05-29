@@ -41,6 +41,7 @@ def main():
         print("1. Add Expense")
         print("2. Show Expenses")
         print("3. Exit")
+        print("4. Remove Expense")
         
         choice = input("Choose an option: ").strip()
         
@@ -48,6 +49,23 @@ def main():
             add_expense()
         elif choice == "2":
             show_expenses()
+            elif choice == "4":
+    
+    if not expenses:
+        print("No expenses to remove.")
+        continue
+    
+    show_expenses()
+    
+    try:
+        remove_index = int(input("Enter expense number to remove: "))
+        
+        removed = expenses.pop(remove_index - 1)
+        
+        print(f"✅ Removed: {removed['name']}")
+    
+    except (ValueError, IndexError):
+        print("Invalid selection.")
         elif choice == "3":
             print("Goodbye!")
             break
