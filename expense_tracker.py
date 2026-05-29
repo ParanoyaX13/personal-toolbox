@@ -1,9 +1,19 @@
 expenses = []
+categories = ["Food", "Transport", "Bills", "Other"]
 
 def add_expense():
     """Add a new expense"""
     
     name = input("Expense name: ").strip()
+    print("Select category:")
+for i, cat in enumerate(categories, start=1):
+    print(f"{i}. {cat}")
+
+try:
+    cat_index = int(input("Category number: "))
+    category = categories[cat_index - 1]
+except (ValueError, IndexError):
+    category = "Other"
     
     try:
         amount = float(input("Expense amount: "))
@@ -14,6 +24,8 @@ def add_expense():
     expenses.append({
         "name": name,
         "amount": amount
+            "category": category
+        
     })
     
     print("✅ Expense added successfully.")
@@ -30,7 +42,7 @@ def show_expenses():
     print("\n=== Expense List ===")
     
     for index, expense in enumerate(expenses, start=1):
-        print(f"{index}. {expense['name']} - ${expense['amount']}")
+        print(f"{index}. {expense['name']} ({expense['category']}) - ${expense['amount']}")
         total += expense["amount"]
     
     print(f"\nTotal Expenses: ${total}")
