@@ -6,6 +6,12 @@ def roll_dice():
     print("\n=== Dice Simulator ===")
     
     dice = input("How many dice to roll? ").strip()
+    rounds = input("How many rounds? (default 1): ").strip()
+
+try:
+    rounds = int(rounds) if rounds else 1
+except ValueError:
+    rounds = 1
     
     try:
         dice = int(dice)
@@ -13,7 +19,17 @@ def roll_dice():
         print("Invalid number.")
         return
     
+    all_rounds = []
+
+for r in range(rounds):
     results = []
+    
+    for _ in range(dice):
+        results.append(random.randint(1, 6))
+    
+    all_rounds.append(results)
+    
+    print(f"Round {r+1}: {results} | Total: {sum(results)}")
     
     for _ in range(dice):
         results.append(random.randint(1, 6))
@@ -23,3 +39,4 @@ def roll_dice():
 
 if __name__ == "__main__":
     roll_dice()
+    print("\n🎲 Finished all rounds.")
