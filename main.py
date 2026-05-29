@@ -23,6 +23,11 @@ def main():
             unit_converter()
         elif choice == "4":
             print(f"Current time: {get_current_time()}")
+            print("4. Show Current Time")
+            elif choice == "5":
+            currency_converter()
+    print("5. Currency Converter")  
+    print("0. Exit")
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
