@@ -35,6 +35,7 @@ for r in range(rounds):
         results.append(random.randint(1, 6))
     
     print(f"\n🎲 Results: {results}")
+    print(f"Dice Rolled: {len(results)}")
     print(f"Total: {sum(results)}")
     ones = results.count(1)
 print(f"Number of ones: {ones}")
