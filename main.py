@@ -27,7 +27,7 @@ from expense import expense_tracker
 from system_info import show_system_info
 from jokes import tell_joke
 from facts import random_fact
-
+from palindrome import palindrome_checker
 
 def show_menu():
     """Display the main menu and return user's choice"""
@@ -53,6 +53,7 @@ def show_menu():
     print("19. System Information")  
     print("20. Joke Teller")
     print("21. Random Fact")
+    print("22. Palindrome Checker")  
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -109,6 +110,8 @@ elif choice == "19":
             tell_joke()
 elif choice == "21":                    
             random_fact()
+    elif choice == "22":                    
+            palindrome_checker()
     
        elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
