@@ -38,7 +38,7 @@ from speed_converter import speed_converter
 from love_calculator import love_calculator
 from dice import roll_dice
 from word_counter import word_counter
-
+from leap_year import leap_year_checker
 
 def show_menu():
     """Display the main menu and return user's choice"""
@@ -74,7 +74,9 @@ def show_menu():
     print("29. Speed Converter") 
     print("30. Love Calculator")
     print("31. Dice Roller") 
-    print("32. Word Counter")       
+    print("32. Word Counter")  
+    print("33. Leap Year Checker")       
+          
           
           
     
@@ -153,8 +155,10 @@ elif choice == "29":
 elif choice == "30":                    
             love_calculator()
 print("31. Dice Roller")
-elif choice == "34":
+elif choice == "32":
     word_counter()
+elif choice == "33":
+            word_counter()
           
        elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
