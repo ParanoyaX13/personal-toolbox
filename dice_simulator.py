@@ -36,6 +36,7 @@ for r in range(rounds):
     
     print(f"\n🎲 Results: {results}")
     print(f"Total: {sum(results)}")
+    print(f"Highest Roll: {max(results)}")
 
 if __name__ == "__main__":
     roll_dice()
