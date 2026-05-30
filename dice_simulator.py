@@ -36,6 +36,7 @@ for r in range(rounds):
     
     print(f"\n🎲 Results: {results}")
     print(f"Total: {sum(results)}")
+    print(f"Average Roll: {sum(results) / len(results):.2f}")
     print(f"Highest Roll: {max(results)}")
     print(f"Lowest Roll: {min(results)}")
 
