@@ -23,6 +23,7 @@ from qr_generator import qr_code_generator
 except ImportError:
     qr_code_generator = None
 from text_to_speech import text_to_speech_simulator
+from expense import expense_tracker
 
 
 def show_menu():
@@ -45,6 +46,7 @@ def show_menu():
     print("15. Habit Tracker") 
     print("16. QR Code Generator")
     print("17. Text to Speech Simulator")
+    print("18. Expense Tracker") 
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -94,7 +96,8 @@ elif choice == "16":
                 elif choice == "17":                     
             text_to_speech_simulator()
 
-
+elif choice == "18":                     
+            expense_tracker()
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
