@@ -35,6 +35,7 @@ for r in range(rounds):
         results.append(random.randint(1, 6))
     
     print(f"\n🎲 Results: {results}")
+    print(f"Sorted Results: {sorted(results)}")
     print(f"Dice Rolled: {len(results)}")
     print(f"Total: {sum(results)}")
     if all(value == 6 for value in results):
