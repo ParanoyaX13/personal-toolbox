@@ -25,6 +25,7 @@ except ImportError:
 from text_to_speech import text_to_speech_simulator
 from expense import expense_tracker
 from system_info import show_system_info
+from jokes import tell_joke
 
 
 def show_menu():
@@ -49,6 +50,7 @@ def show_menu():
     print("17. Text to Speech Simulator")
     print("18. Expense Tracker") 
     print("19. System Information")  
+    print("20. Joke Teller")
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -101,6 +103,8 @@ elif choice == "18":
             expense_tracker()
 elif choice == "19":                    
             show_system_info()
+    elif choice == "20":                     
+            tell_joke()
         elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
             break
