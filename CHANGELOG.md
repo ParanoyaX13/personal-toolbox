@@ -13,6 +13,12 @@ All notable changes to this project will be documented in this file.
 - Current Time display
 - Helper utilities (`utils.py`)
 - Modular project structure
+- Random Fact Generator
+- Joke Teller
+- System Information
+- Expense Tracker
+- ... (total 21+ tools)
+- Reached over 50 public commits
 
 ### Changed
 - Refactored `main.py` to support new tools
