@@ -3,14 +3,24 @@
 A collection of useful Python command-line tools.
 
 ## Features
-- ✅ **Advanced Calculator** - Addition, Subtraction, Multiplication, Division
-- ✅ **Strong Password Generator** - Custom length, numbers, and symbols
-- ✅ **Unit Converter** - Kilometers ↔ Miles, Celsius ↔ Fahrenheit, Kilograms ↔ Pounds
-- ✅ **Currency Converter** - IRR to USD, EUR, GBP, AED (demo rates)
-- ✅ **Todo List Manager** - Add, view and mark tasks as done
-- ✅ **Current Time** - Live time display
+- ✅ Advanced Calculator
+- ✅ Strong Password Generator
+- ✅ Unit Converter
+- ✅ Currency Converter (IRR)
+- ✅ Todo List Manager
+- ✅ File Organizer
+- ✅ Weather Simulator
+- ✅ Number Guessing Game
+- ✅ Password Strength Checker
+- ✅ BMI Calculator
+- ✅ Rock Paper Scissors
+- ✅ Age Calculator
+- ✅ Motivational Quotes
+- ✅ Countdown Timer
+- ✅ Habit Tracker
+- ✅ QR Code Generator
+- ✅ Expense Tracker
+- ✅ System Information
+- ✅ Joke Teller
+- ✅ Random Facts
 - 🔧 More tools coming soon...
-
-## How to run
-```bash
-python main.py
