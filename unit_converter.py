@@ -7,7 +7,7 @@ def convert_length():
     print("1. Meters to Kilometers")
     print("2. Meters to Centimeters")
     print("3. Meters to Millimeters")
-    
+    print("4. Kilometers to Miles")
     choice = input("Choose option: ").strip()
     
     if choice == "1":
@@ -16,6 +16,9 @@ def convert_length():
         print(f"{meters} m = {meters * 100} cm")
     elif choice == "3":
         print(f"{meters} m = {meters * 1000} mm")
+    elif choice == "4":
+    km = meters / 1000
+    print(f"{km} km = {km * 0.621371} miles")    
     else:
         print("Invalid option.")
 
