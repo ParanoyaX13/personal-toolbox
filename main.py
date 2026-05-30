@@ -37,7 +37,7 @@ from temp_converter import temperature_converter
 from speed_converter import speed_converter
 from love_calculator import love_calculator
 from dice import roll_dice
-
+from word_counter import word_counter
 
 
 def show_menu():
@@ -74,6 +74,7 @@ def show_menu():
     print("29. Speed Converter") 
     print("30. Love Calculator")
     print("31. Dice Roller") 
+    print("32. Word Counter")       
           
           
     
@@ -152,6 +153,8 @@ elif choice == "29":
 elif choice == "30":                    
             love_calculator()
 print("31. Dice Roller")
+elif choice == "34":
+    word_counter()
           
        elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
