@@ -30,6 +30,7 @@ from facts import random_fact
 from palindrome import palindrome_checker
 from converter import binary_converter
 from caesar_cipher import caesar_tool
+from loan import loan_calculator
 
 
 def show_menu():
@@ -59,6 +60,8 @@ def show_menu():
     print("22. Palindrome Checker")  
     print("23. Binary Converter") 
     print("24. Caesar Cipher")
+    print("25. Loan Calculator") 
+    
     print("0. Exit")
     return input("Choose an option: ")
 
@@ -121,6 +124,8 @@ elif choice == "21":
             binary_converter()
     elif choice == "24":                     
             caesar_tool()
+elif choice == "25":                     
+            loan_calculator()
     
        elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
