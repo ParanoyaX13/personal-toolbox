@@ -37,6 +37,8 @@ for r in range(rounds):
     print(f"\n🎲 Results: {results}")
     print(f"Dice Rolled: {len(results)}")
     print(f"Total: {sum(results)}")
+    if all(value == 6 for value in results):
+    print("🔥 JACKPOT! All dice landed on 6!")
     ones = results.count(1)
 print(f"Number of ones: {ones}")
     sixes = results.count(6)
