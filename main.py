@@ -34,6 +34,7 @@ from loan import loan_calculator
 from unit_price import unit_price_calculator
 from tip_calculator import tip_calculator
 from temp_converter import temperature_converter
+from speed_converter import speed_converter
 
 
 def show_menu():
@@ -67,7 +68,7 @@ def show_menu():
     print("26. Unit Price Calculator")
     print("27. Tip Calculator")
     print("28. Temperature Converter") 
-    
+    print("29. Speed Converter") 
     
     print("0. Exit")
     return input("Choose an option: ")
@@ -139,6 +140,8 @@ elif choice == "27":
             tip_calculator()
 elif choice == "28":                     
             temperature_converter()
+elif choice == "29":                    
+            speed_converter()          
           
        elif choice == "0":
             print("Goodbye! Thanks for using Personal Toolbox.")
