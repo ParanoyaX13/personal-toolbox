@@ -27,6 +27,7 @@ def main():
     
     result = check_password(password)
     print(f"Strength: {result}")
+    print(f"Score: {len([c for c in password if c.isalnum()])}/5")
 
 if __name__ == "__main__":
     main()
