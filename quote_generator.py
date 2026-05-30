@@ -14,8 +14,30 @@ def generate_quote():
     """Display a random quote"""
     
     print("\n=== Random Quote Generator ===")
-    
-    quote = random.choice(quotes)
+    categories = {
+    "1": "Motivation",
+    "2": "Life",
+    "3": "Coding"
+}
+
+print("\nSelect category:")
+for k, v in categories.items():
+    print(f"{k}. {v}")
+
+choice = input("Choose category: ").strip()
+
+filtered_quotes = quotes
+
+if choice == "1":
+    filtered_quotes = quotes[:3]
+elif choice == "2":
+    filtered_quotes = quotes[2:6]
+elif choice == "3":
+    filtered_quotes = quotes[4:]
+else:
+    filtered_quotes = quotes
+
+quote = random.choice(filtered_quotes)
     
     print(f"\n💡 Quote:\n{quote}")
 
