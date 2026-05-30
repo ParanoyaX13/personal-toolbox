@@ -36,6 +36,8 @@ for r in range(rounds):
     
     print(f"\n🎲 Results: {results}")
     print(f"Total: {sum(results)}")
+    ones = results.count(1)
+print(f"Number of ones: {ones}")
     sixes = results.count(6)
 print(f"Number of sixes: {sixes}")
     print(f"Average Roll: {sum(results) / len(results):.2f}")
